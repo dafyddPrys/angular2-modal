@@ -11,7 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ModalComponent = (function () {
     function ModalComponent() {
+        this.closeModal = new core_1.EventEmitter();
     }
+    ModalComponent.prototype.close = function () {
+        this.closeModal.emit({
+            value: true
+        });
+    };
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], ModalComponent.prototype, "closeModal", void 0);
     ModalComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

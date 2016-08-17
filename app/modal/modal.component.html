@@ -1,1 +1,11 @@
-<p>Hello!</p>
+<div class="ng2__modal__overlay"></div>
+<div class="ng2__modal__container">
+  <div class="ng2__modal">
+    <div class="ng2__modal__close">
+      <span (click)="close()">X</span>
+    </div>
+    <div class="ng2__modal__content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

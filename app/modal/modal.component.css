@@ -1,0 +1,70 @@
+.ng2__modal__overlay {
+  position: fixed;
+  top : 0;
+  left : 0;
+  height:100%;
+  width:100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.ng2__modal__container {
+  /* use flex for easy centering. */
+  display: flex;
+  width: 100%;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top:0;
+  left: 0;
+
+  z-index: 11; /* 1px higher than the overlay layer */
+}
+
+.ng2__modal {
+  min-width: 300px;;
+  height: 200px;
+
+  background-color: #ffffff;
+  border-radius: 0px;
+  text-align: center;
+
+
+  /* make everything inside the modal stack vertically. */
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+/* Close modal button */
+.ng2__modal__close {
+
+  width:100%;
+  height:40px;
+  text-align: right;
+
+}
+
+.ng2__modal__close span {
+  height:40px;
+  width:40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.ng2__modal__close span:hover {
+  cursor: pointer;
+  color: #F60006;
+}
+/* END of close modal button */
+
+.ng2__modal__content {
+  padding:20px;
+  padding-top:0;
+  width:100%;
+  height:100%;
+  flex-grow: 1;
+  position: relative;
+}
